@@ -1,12 +1,39 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/secret-dunder-admin/download",
-      "destination": "/api/secret-dunder-admin-download"
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/secret-dunder-admin",
-      "destination": "/api/secret-dunder-admin"
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/ids",
+      "dest": "/api/ids.js"
+    },
+    {
+      "src": "/secret-dunder-admin/download",
+      "dest": "/api/secret-dunder-admin-download.js"
+    },
+    {
+      "src": "/secret-dunder-admin",
+      "dest": "/api/secret-dunder-admin.js"
+    },
+    {
+      "src": "/styles.css",
+      "dest": "/public/styles.css"
+    },
+    {
+      "src": "/app.js",
+      "dest": "/public/app.js"
+    },
+    {
+      "src": "/",
+      "dest": "/public/index.html"
     }
   ]
 }
