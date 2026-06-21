@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/secret-dunder-admin/download",
+      "destination": "/api/secret-dunder-admin-download"
+    },
+    {
+      "source": "/secret-dunder-admin",
+      "destination": "/api/secret-dunder-admin"
+    }
+  ]
+}
