@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partyvorous Dunder Mifflin Employee ID Maker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="site-brand" href="https://instagram.com/partyvorous" target="_blank" rel="noreferrer">
+      <strong>Partyvorous</strong>
+      <span>@partyvorous</span>
+    </a>
+  </header>
+
+  <main class="app-shell">
+    <section class="editor-panel" aria-label="Employee ID details">
+      <div class="brand-lockup">
+        <span>Partyvorous presents</span>
+        <h1>Employee ID Maker</h1>
+        <p>Create your Dunder Mifflin badge.</p>
+      </div>
+
+      <form id="employee-form" class="form-grid">
+        <label>
+          Employee name
+          <input id="name" name="name" type="text" value="Michael Scott" maxlength="42" required>
+        </label>
+
+        <label>
+          Position
+          <select id="position" name="position">
+            <option>Regional Manager</option>
+            <option>Assistant Regional Manager</option>
+            <option>Assistant to the Regional Manager</option>
+            <option>Sales Representative</option>
+            <option>Receptionist</option>
+            <option>Office Administrator</option>
+            <option>Accountant</option>
+            <option>Quality Assurance</option>
+            <option>Warehouse Foreman</option>
+            <option>Human Resources</option>
+            <option>Temp</option>
+          </select>
+        </label>
+
+        <label>
+          Branch
+          <select id="branch" name="branch">
+            <option>Scranton, PA</option>
+            <option>Stamford, CT</option>
+            <option>Nashua, NH</option>
+            <option>Utica, NY</option>
+            <option>Corporate, NY</option>
+          </select>
+        </label>
+
+        <label>
+          Employee photo
+          <input id="photo" name="photo" type="file" accept="image/*">
+        </label>
+
+        <div class="action-row">
+          <button type="button" id="download" class="button">Download PNG</button>
+          <button type="button" id="share-story" class="button">Post to Story</button>
+          <button type="submit" class="button primary">Finalize and Send</button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="preview-panel" aria-label="Live employee ID preview">
+      <canvas id="badge" width="675" height="1050"></canvas>
+    </section>
+  </main>
+
+  <div id="success-modal" class="success-modal" aria-hidden="true">
+    <div class="confetti-stage" aria-hidden="true"></div>
+    <section class="success-card" role="dialog" aria-modal="true" aria-labelledby="success-title">
+      <button type="button" id="close-success" class="modal-close" aria-label="Close celebration">Close</button>
+      <div class="office-meme">
+        <p>IT IS YOUR BADGE.</p>
+        <span>FACT: Partyvorous approves this branch activity.</span>
+      </div>
+      <p class="success-kicker">Save complete</p>
+      <h2 id="success-title">That ID is Dundie-worthy.</h2>
+      <p class="success-copy">
+        Thank you. If you like it, please follow Partyvorous on Instagram for more such cool stuff.
+      </p>
+      <div class="modal-actions">
+        <a id="success-instagram" class="button primary" href="https://instagram.com/partyvorous" target="_blank" rel="noreferrer">Follow Partyvorous</a>
+        <a id="success-open" class="button" href="#" target="_blank" rel="noreferrer">Open PNG</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

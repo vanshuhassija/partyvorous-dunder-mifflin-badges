@@ -1,0 +1,16 @@
+{
+  "name": "dunder-mifflin-employee-ids",
+  "version": "1.0.0",
+  "description": "Create and save Dunder Mifflin inspired employee IDs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "dunder-mifflin",
+    "employee-id",
+    "canvas"
+  ],
+  "author": "",
+  "license": "MIT"
+}
